@@ -1,15 +1,13 @@
-import { Link, Route, Routes } from 'react-router-dom'
-import './App.css'
-import Hero from './pages/Hero/Hero'
-import Projects from './pages/Projects/Projects'
+import { Link, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Hero from "./pages/Hero/Hero";
+import Projects from "./pages/Projects/Projects";
 
 function App() {
-
-return (
+  return (
     <div>
       <nav>
-        <Link to="/">Hero</Link> |{" "}
-        <Link to="/about">Projects</Link> |{" "}
+        <Link to="/">Hero</Link> | <Link to="/about">Projects</Link> |{" "}
       </nav>
 
       <Routes>
@@ -17,7 +15,7 @@ return (
         <Route path="/about" element={<Projects />} />
       </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
