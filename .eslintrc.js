@@ -14,16 +14,18 @@ module.exports = {
       version: "detect",
     },
   },
-  plugins: ["react", "react-hooks", "react-refresh", "@typescript-eslint"],
+  plugins: ["react", "react-hooks", "@typescript-eslint", "prettier"],
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended", // <--- Add this line
   ],
   rules: {
-    "react/react-in-jsx-scope": "off", // Not needed in Vite/React 17+
+    "react/react-in-jsx-scope": "off",
     "react-refresh/only-export-components": "warn",
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+    "prettier/prettier": "warn", // <--- Optional: shows Prettier issues as warnings
   },
 };
