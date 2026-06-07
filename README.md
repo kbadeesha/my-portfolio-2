@@ -71,3 +71,10 @@ export default defineConfig([
   },
 ]);
 ```
+
+
+REFERENCES
+https://arocksworld.com/
+
+japanese
+https://dribbble.com/shots/22655637-JSAR

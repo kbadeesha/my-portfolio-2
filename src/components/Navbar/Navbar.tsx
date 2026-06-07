@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="navbar-container">
         {/* Logo */}
-        <div className="navbar-logo">MyApp</div>
+        <div className="navbar-logo">Adeesha KristhoruBaduge</div>
 
         {/* Hamburger menu */}
         <button
