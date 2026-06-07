@@ -1,4 +1,3 @@
-import React from 'react';
 import { TechData } from './TechData';
 
 const Tech = () => {
