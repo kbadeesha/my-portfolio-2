@@ -1,3 +1,135 @@
-.page-heading-main {
-  padding-left: 25px;
+/* Core 50/50 Split Frame Engine */
+.hero-split-container {
+  display: flex;
+  width: 100%;
+  min-height: 85vh;
+  align-items: stretch; /* CRITICAL: Forces both columns to stay exactly the same height */
+  background-color: #fafafa;
+  overflow: hidden;
+}
+
+/* Left Content Column Configuration */
+.hero-left-content {
+  flex: 1 1 50%; /* CRITICAL: Forces exactly 50% base width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 3rem;
+  background-color: #ffffff;
+}
+
+/* Bounds text width so typography reads elegantly rather than stretching out broad */
+.hero-text-wrapper {
+  max-width: 540px;
+  width: 100%;
+}
+
+.hero-tagline {
+  display: inline-block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #3182ce;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.hero-heading {
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  line-height: 1.15;
+  color: #1a202c;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 2.5rem;
+}
+
+/* Call to Action Button Containers */
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary {
+  background-color: #1a202c;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #2d3748;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+  background-color: #f7fafc;
+  color: #1a202c;
+}
+
+/* Right Media Column Configuration */
+.hero-right-image {
+  flex: 1 1 50%; /* CRITICAL: Forces exactly 50% base width */
+  position: relative;
+}
+
+/* Absolute positioning fixes image sync bugs when text expands heavily */
+.hero-right-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive Adaptive Layer: Mobile Overrides */
+@media (max-width: 968px) {
+  .hero-split-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .hero-left-content,
+  .hero-right-image {
+    flex: 1 1 auto; /* Allows them to stack naturally on mobile */
+    width: 100%;
+  }
+
+  .hero-left-content {
+    padding: 4rem 1.5rem;
+    order: 2;
+  }
+
+  .hero-right-image {
+    height: 45vh;
+    order: 1;
+  }
+
+  /* Reset absolute placement on mobile so image renders within the 45vh height boundary */
+  .hero-right-image img {
+    position: relative;
+  }
 }

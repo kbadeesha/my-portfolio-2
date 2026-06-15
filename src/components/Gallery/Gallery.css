@@ -1,0 +1,80 @@
+/* Container layout styling */
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* The Core Reactive Grid Frame
+   Automatically adjusts columns based on screen width.
+   Cards will be a minimum of 300px, expanding to fill available space.
+*/
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px; /* Space between the project cards */
+}
+
+/* Individual Project Card Frame */
+.gallery-item {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column; /* Stack image, text, and link vertically */
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+/* Subtle hover pop effect */
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Image Frame Styling */
+.gallery-item img {
+  width: 100%;
+  height: 200px; /* Fixed height for visual consistency across cards */
+  object-fit: cover; /* Crop gracefully without stretching the aspect ratio */
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Text & Content wrapper padding */
+.gallery-item h3 {
+  margin: 1rem 1rem 0.5rem 1rem;
+  font-size: 1.25rem;
+  color: #1a202c;
+}
+
+.gallery-item p {
+  margin: 0 1rem 1.5rem 1rem;
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+  flex-grow: 1; /* Pushes the button to the bottom if text lengths vary */
+}
+
+/* Call to Action Project Link */
+.gallery-item a {
+  display: block;
+  text-align: center;
+  background-color: #3182ce; /* Modern slate blue accent */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem;
+  margin: 0 1rem 1rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.gallery-item a:hover {
+  background-color: #2b6cb0;
+}
