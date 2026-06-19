@@ -1,0 +1,172 @@
+/* Footer Base Styles */
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 4rem 2rem 2rem 2rem;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: 2.5rem;
+}
+
+/* Section Specifics */
+.footer-section h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+/* Brand Column */
+.footer-logo {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.footer-logo span {
+  color: #00adb5; /* Accent color */
+}
+
+.footer-desc {
+  color: #b3b3b3;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Links Columns */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-section ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #00adb5;
+}
+
+/* Newsletter Column */
+.footer-section.newsletter p {
+  color: #b3b3b3;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #252525;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: #00adb5;
+}
+
+.newsletter-form button {
+  background-color: #00adb5;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #008288;
+}
+
+/* Divider */
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background: #333;
+  max-width: 1200px;
+  margin: 2.5rem auto 1.5rem auto;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright {
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-socials a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: #00adb5;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 968px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+  }
+}

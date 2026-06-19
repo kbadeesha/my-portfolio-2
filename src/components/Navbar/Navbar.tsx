@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Home, User, BookOpen, Mail } from 'lucide-react';
+import { Home, User, BookOpen, Mail, type LucideIcon } from 'lucide-react';
 import './Navbar.css';
 
 interface NavLink {
   name: string;
   href: string;
   isButton?: boolean;
-  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon?: LucideIcon;
 }
 
 const navLinks: NavLink[] = [
@@ -27,14 +27,20 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="navbar-container">
         {/* Logo */}
-        <div className="navbar-logo">Adeesha KristhoruBaduge</div>
+        <div className="navbar-logo">
+          Adeesha <span>KristhoruBaduge</span>
+        </div>
 
         {/* Hamburger menu */}
         <button
           className={`navbar-toggle ${isOpen ? 'open' : ''}`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
-        ></button>
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
         {/* Nav Links */}
         <ul className={`navbar-menu ${isOpen ? 'active' : ''}`}>
@@ -47,7 +53,7 @@ const Navbar: React.FC = () => {
                   className={`${link.isButton ? 'btn-primary' : ''} link-class`}
                   onClick={() => setIsOpen(false)} // close menu on click
                 >
-                  <Icon />
+                  <Icon size={18} />
                   <div className="link-name">{link.name}</div>
                 </a>
               </li>
