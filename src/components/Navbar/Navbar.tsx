@@ -27,9 +27,9 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="navbar-container">
         {/* Logo */}
-        <div className="navbar-logo">
+        <h2 className="navbar-logo">
           Adeesha <span>KristhoruBaduge</span>
-        </div>
+        </h2>
 
         {/* Hamburger menu */}
         <button

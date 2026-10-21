@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Brand/About Section */}
         <div className="footer-section brand">
           <h2 className="footer-logo">
-            Brand<span>Name</span>
+            Adeesha<span> KristhoruBaduge</span>
           </h2>
           <p className="footer-desc">
             Building modern web experiences with passion. Connect with us to
